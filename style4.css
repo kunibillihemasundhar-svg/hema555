@@ -1,0 +1,325 @@
+/* General settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* 2. Navigation Bar */
+
+nav {
+    background-color: #222;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+/* Home Section */
+
+.home {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 60px 8%;
+}
+
+
+/* 4. Profile Photo */
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    background-image: url("https://i.ibb.co/TBcCV1Xn/my-photo.jpg");
+    background-size: cover;
+    border-radius: 50%;
+
+    border: 6px solid #00bcd4;
+}
+
+
+.home h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home h3 {
+    font-size: 24px;
+    color: #00a0b5;
+    margin-bottom: 15px;
+}
+
+.home p {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+
+/* 8. Resume Button */
+
+.resume-button {
+    display: inline-block;
+
+    background-color: #00a0b5;
+    color: white;
+
+    padding: 12px 25px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.resume-button:hover {
+    background-color: #007c8c;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 70px 8%;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.section p {
+    max-width: 900px;
+    margin-bottom: 15px;
+}
+
+
+/* 5. Skills */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Skill Progress Bar */
+
+.progress {
+    width: 100%;
+    height: 10px;
+
+    background-color: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+}
+
+
+/* Different skill levels */
+
+.python {
+    width: 70%;
+    background-color: #00a0b5;
+}
+
+.java {
+    width: 60%;
+    background-color: #00a0b5;
+}
+
+.html {
+    width: 80%;
+    background-color: #00a0b5;
+}
+
+.genai {
+    width: 45%;
+    background-color: #00a0b5;
+}
+
+.agents {
+    width: 35%;
+    background-color: #00a0b5;
+}
+
+
+/* 3. Project Cards */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+
+    width: 300px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.project-card button {
+    background-color: #222;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.project-card button:hover {
+    background-color: #00a0b5;
+}
+
+
+/* 7. Contact */
+
+#contact a {
+    color: #008da0;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* 6. Mobile Friendly / Responsive Design */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .profile-photo {
+        width: 170px; 
+        height: 170px;
+    }
+
+    .skills-container,
+    .projects-container {
+        justify-content: center;
+    }
+
+    .skill-card,
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
